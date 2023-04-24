@@ -22,13 +22,13 @@ const App = () => {
     <>
     <div className="flex justify-center items-center h-screen w-screen">
       <div
-        className="bg-cover bg-center h-screen w-screen relative flex flex-col justify-center items-center start-here block modal"
+        className="bg-cover bg-center h-screen w-screen relative flex flex-col justify-center items-center"
         style={{
           backgroundImage:
             `url(${imgURL})`,
         }}
       >
-        <div className='h-80 w-96'>
+        <div className='h-screen w-screen relative flex flex-col justify-center items-center'>
           <main className="relative flex flex-col justify-center items-center start-here block modal bg-white/[.75] w-[20rem] md:w-[28rem] rounded-3xl pt-6">
           <Labels
             resetTimerValues={resetTimerValues}
