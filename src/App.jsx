@@ -9,7 +9,7 @@ import { useState } from "react";
 import useCalculateTime from "./hooks/useCalculateTime";
 import { controllers } from "./constants/constants";
 import AccessTimeIcon from '@mui/icons-material/AccessTime';
-import SpotifyPlayer from './components/SpotifyPlayer';
+import imgURL from './assets/corn.jpg';
 
 const App = () => {
   const { cornodoro, selectedControl, setCornodoro, setSelectedControl, resetTimerValues, getRemainingTimePercentage } = useTimer();
@@ -19,48 +19,63 @@ const App = () => {
   document.title = `${controllers[selectedControl].label} - ${minutes < 9 ? "0" : ""}${minutes}:${seconds < 9 ? "0" : ""}${seconds}`;
 
   return (
-    <main className="relative flex flex-col justify-center items-center start-here block modal bg-white/[.75] w-[20rem] md:w-[28rem] rounded-3xl pt-6 ">
-      <Labels
-        resetTimerValues={resetTimerValues}
-        selectedControl={selectedControl}
-        setSelectedControl={setSelectedControl}
-        setCornodoro={setCornodoro}
-      />
-      <div className="tw-timer-container">
-        <div className="tw-timer">
-          <div className="flex flex-col justify-center items-center font-semibold relative">
-            <CircularProgressbarWithChildren
-              strokeWidth={2}
-              trailColor="transparent"
-              value={getRemainingTimePercentage()}
-              styles={buildStyles({
-                trailColor: "transparent",
-                pathColor: "#68d37f",
-              })}>
-              <TimeDisplay
-                cornodoro={cornodoro}
-                selectedControl={selectedControl}
-              />
-              <ToggleButton
-                cornodoro={cornodoro}
-                setCornodoro={setCornodoro}
-              />
-            </CircularProgressbarWithChildren>
+    <>
+    <div className="flex justify-center items-center h-screen w-screen">
+      <div
+        className="bg-cover bg-center h-screen w-screen relative flex flex-col justify-center items-center start-here block modal"
+        style={{
+          backgroundImage:
+            `url(${imgURL})`,
+        }}
+      >
+        <div className='h-80 w-96'>
+          <main className="relative flex flex-col justify-center items-center start-here block modal bg-white/[.75] w-[20rem] md:w-[28rem] rounded-3xl pt-6">
+          <Labels
+            resetTimerValues={resetTimerValues}
+            selectedControl={selectedControl}
+            setSelectedControl={setSelectedControl}
+            setCornodoro={setCornodoro}
+          />
+          <div className="tw-timer-container">
+            <div className="tw-timer">
+              <div className="flex flex-col justify-center items-center font-semibold relative">
+                <CircularProgressbarWithChildren
+                  strokeWidth={2}
+                  trailColor="transparent"
+                  value={getRemainingTimePercentage()}
+                  styles={buildStyles({
+                    trailColor: "transparent",
+                    pathColor: "#68d37f",
+                  })}>
+                  <TimeDisplay
+                    cornodoro={cornodoro}
+                    selectedControl={selectedControl}
+                  />
+                  <ToggleButton
+                    cornodoro={cornodoro}
+                    setCornodoro={setCornodoro}
+                  />
+                </CircularProgressbarWithChildren>
+              </div>
+            </div>
           </div>
+          <button onClick={() => setIsSettingsOn(true)} className='m-2 bg-pmd-blue-900 rounded-full'>
+                
+            <AccessTimeIcon 
+              className="m-2 pmd-green-600"
+              />
+          </button>
+          <Modal
+            isSettingsOn={isSettingsOn}
+            setIsSettingsOn={setIsSettingsOn}
+            setCornodoro={setCornodoro}
+          />
+        </main>
         </div>
       </div>
-      <button onClick={() => setIsSettingsOn(true)} className='m-2 bg-pmd-blue-900 rounded-full'>
-        
-        <AccessTimeIcon 
-          className="m-2 pmd-green-600"
-          />
-      </button>
-      <Modal
-        isSettingsOn={isSettingsOn}
-        setIsSettingsOn={setIsSettingsOn}
-        setCornodoro={setCornodoro}
-      />
-    </main>
+    </div>
+  </>
+    
   );
 };
 
