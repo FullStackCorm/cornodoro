@@ -141,9 +141,9 @@ Email - corinne.m.dev@gmail.com
 [Bootstrap-url]: https://getbootstrap.com
 [JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
 [JQuery-url]: https://jquery.com
-[Vitejs.dev]: https://img.shields.io/badge/Vite-6e329d?style=for-the-badge&logo=vite&logoColor=white
+[Vitejs.dev]: https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white
 [Vite-url]: https://vitejs.dev/
-[Tailwindcss.com]: https://img.shields.io/badge/Tailwind-334155?style=for-the-badge&logo=tailwindcss&logoColor=white
+[Tailwindcss.com]: https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white
 [Tailwind-url]: https://tailwindcss.com/ 
 
 
