@@ -66,7 +66,7 @@ Of course, not everyone will agree that cornodoro is a superior product, but the
 
 * [![React][React.js]][React-url]
 * [![Vite][vitejs.dev]][Vite-url]
-* [![Tailwind][Tailwindcss.com]][Bootstrap-url]
+* [![Tailwind][Tailwindcss.com]][Tailwind-url]
 
 
 <!-- GETTING STARTED -->
