@@ -13,7 +13,7 @@
   <p align="center">
     It's a pomodoro app, but with corn, because it's got the juice.
     <br />
-    <a href="https://cornodoro.netlify.app/"><strong>View Demo »</strong></a>
+    <a href="https://cornodoro.lol/"><strong>Open App »</strong></a>
     <br />
     <br />
     <a href="https://github.com/FullStackCorm/cornodoro/issues">Report Bug</a>
